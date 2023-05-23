@@ -116,7 +116,7 @@ std::optional<LRESULT> WindowManagerPlugin::HandleWindowProc(HWND hWnd,
     // This must always be first or else the one of other two ifs will execute
     //  when window is in full screen and we don't want that
     if (wParam && window_manager->IsFullScreen()) {
-      NCCALCSIZE_PARAMS* sz = reinterpret_cast<NCCALCSIZE_PARAMS*>(lParam);
+      // NCCALCSIZE_PARAMS* sz = reinterpret_cast<NCCALCSIZE_PARAMS*>(lParam);
       // sz->rgrc[0].bottom -= 3;
       return 0;
     }
